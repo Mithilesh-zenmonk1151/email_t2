@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Confirmation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      color: #3498db;
+    }
+    .date {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .name-country {
+      margin-bottom: 20px;
+      color: #34495e;
+    }
+    .offer-letter {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .offer-heading {
+      color: #e74c3c;
+    }
+    .body {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .body p {
+      margin-bottom: 15px;
+    }
+    .cta {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #27ae60;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+    }
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .india-office {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .support {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1><%= companyName %></h1>
+    </div>
+    <div class="date">
+      <p><%= month %> <%= date %>, <%= year %></p>
+    </div>
+    <div class="name-country">
+      <p><%= firstname %> <%= lastname %></p>
+      <p><%= country %></p>
+    </div>
+    <div class="offer-letter">
+      <h2 class="offer-heading">LETTER OF OFFER</h2>
+    </div>
+    <div class="body">
+      <p>Dear <%= firstname %>,</p>
+      <p>With reference to your application and the subsequent interview you had with us, we are pleased to offer you the position of "<%= role %>" in our organization at a stipend of INR 20,000 per month. Your internship is scheduled to start effective from <%= startMonth %> <%= startDate %>, <%= startYear %>, for a period of <%= numberOfMonth %> months. On successful completion of the internship, your CTC will be between <%= lowestCtc %> LPA – <%= highestCtc %> LPA on conversion to a full-time employee. You will also be eligible for standard benefits as per company policy. We believe that your skills, experience, and passion for administration and management skills will be a great asset to our team. Please confirm your acceptance of this offer by <%= acceptanceMonth %> <%= acceptanceDate %>, <%= acceptanceYear %>. After the acceptance, please share the following documents within a week:</p>
+      <ol>
+        <li>NOC certificate from University/College</li>
+        <li>ID (preferably Aadhaar Card) and Address Proof</li>
+        <li>Copies of educational certificates/degrees (10th onwards)</li>
+        <li>Experience certificates, if any</li>
+      </ol>
+      <p>Your appointment will be subject to background verification of your credentials and a formal letter of appointment will be issued upon your joining. We welcome you to the Zenmonk Team. If you have any questions, please feel free to reach out at any time.</p>
+    </div>
+    <div class="signature">
+      <h3>Sincerely,</h3>
+      <h4>Management Division,</h4>
+      <h4>Zenmonk Software and Services Pvt. Ltd.</h4>
+    </div>
+    <div class="footer">
+      <a href="https://zenmonk.tech/">zenmonk.tech</a>
+    </div>
+  </div>
+
+  <div class="india-office">
+    <h4>Corporate Office India:</h4>
+    <p>Phase 8B, Industrial Area, Sahibzada Ajit Singh Nagar (Mohali), Punjab 160055</p>
+  </div>
+  <div class="india-office">
+    <h4>Corporate Offices International:</h4>
+    <p>Spain (Barcelona), Spain (Cantabria), Brazil, Ecuador, Colombia, Perú</p>
+  </div>
+  <div class="support">
+    If you have any further questions or need immediate assistance, please feel free to reach out to us at <a href="https://zenmonk.tech/">zenmonk.tech</a>. We are here to help!
+  </div>
+</body>
+</html>

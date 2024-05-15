@@ -18,11 +18,6 @@ export const sendMail = createAsyncThunk(
       startDate: string;
       startYear: string;
       numberOfMonth: string;
-      lowestCtc: string;
-      highestCtc: string;
-      acceptanceMonth: string;
-      acceptanceDate: string;
-      role: string;
       subject: string;
       companyName: string;
       heading: string;
@@ -37,11 +32,18 @@ export const sendMail = createAsyncThunk(
       listItem5: string;
       acceptanceYear: string;
       selecteddvalue: string;
+      department:string;
+      companyEmail:string;
+      companyFullName:string;
+      corporateOfficeOne:string;
+      corporateOfficeOneAddr:string;
+      corporateOfficeTwo:string;
+      corporateOfficeTwoAddr:string;
     },
     { rejectWithValue }
   ) => {
     try {
-      console.log("Slice wala user During signup", mail);
+      console.log("Slice wala mail Template", mail);
       console.log("Hello world");
 
       const response = await mailSendService({
@@ -56,11 +58,7 @@ export const sendMail = createAsyncThunk(
       startDate:mail.startDate,
       startYear:mail.startYear,
       numberOfMonth:mail.numberOfMonth,
-      lowestCtc:mail.lowestCtc,
-      highestCtc:mail.highestCtc,
-      acceptanceMonth:mail.acceptanceMonth,
-      acceptanceDate:mail.acceptanceDate,
-      role:mail.role,
+      
       subject:mail.subject,
       companyName:mail.companyName,
       heading:mail.heading,
@@ -74,7 +72,17 @@ export const sendMail = createAsyncThunk(
       listItem4:mail.listItem4,
       listItem5:mail.listItem5,
       acceptanceYear:mail.acceptanceYear,
-      selecteddvalue:mail.selecteddvalue
+      selecteddvalue:mail.selecteddvalue,
+      department:mail.department,
+      companyEmail:mail.companyEmail,
+      companyFullName:mail.companyFullName,
+      corporateOfficeOne:mail.corporateOfficeOne,
+      corporateOfficeOneAddr:mail.corporateOfficeOneAddr,
+      corporateOfficeTwo:mail.corporateOfficeTwo,
+      corporateOfficeTwoAddr:mail. corporateOfficeTwoAddr
+
+
+
       });
       const data = response?.data;
       console.log(data);

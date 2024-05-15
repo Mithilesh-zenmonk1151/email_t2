@@ -45,7 +45,16 @@ exports.sendOfferLetterpMail = async (payload) => {
       listItem4,
       listItem5,
       acceptanceYear,
-      selecteddvalue
+      selecteddvalue,
+      department,
+      companyFullName,
+      companyEmail,
+      corporateOfficeOne,
+      corporateOfficeOneAddr,
+      corporateOfficeTwo,
+      corporateOfficeTwoAddr
+
+
     } = payload.body;
     console.log("REQ.BNODY", payload.body);
     const findingTypeOfTemp = {
@@ -108,6 +117,13 @@ exports.sendOfferLetterpMail = async (payload) => {
         listItem3,
         listItem4,
         listItem5,
+        department,
+        companyEmail,
+        companyFullName,
+        corporateOfficeOne,
+        corporateOfficeOneAddr,
+        corporateOfficeTwo,
+        corporateOfficeTwoAddr
       },
       (err, data) => {
         if (err) {

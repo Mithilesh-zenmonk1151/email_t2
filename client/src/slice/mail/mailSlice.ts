@@ -36,7 +36,14 @@ type initialStateProps = {
       listItem4:string,
       listItem5:string,
       acceptanceYear:string,
-      selecteddvalue:string
+      selecteddvalue:string,
+      department:string;
+      companyEmail:string;
+      companyFullName:string;
+      corporateOfficeOne:string;
+      corporateOfficeOneAddr:string;
+      corporateOfficeTwo:string;
+      corporateOfficeTwoAddr:string;
       };
       
     } 
@@ -79,7 +86,14 @@ type initialStateProps = {
       listItem4: '',
       listItem5: '',
       acceptanceYear: '',
-      selecteddvalue: ''
+      selecteddvalue: '',
+      department:"",
+      companyEmail:"",
+      companyFullName:"",
+      corporateOfficeOne:"",
+      corporateOfficeOneAddr:"",
+      corporateOfficeTwo:"",
+      corporateOfficeTwoAddr:"",
       },
     
     },

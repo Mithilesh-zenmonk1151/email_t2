@@ -38,7 +38,7 @@ const handleOnTestClick = (selecteddvalue: string): void => {
     console.log("selecteddvalue==============================",selecteddvalue);
     // router.push("/add-question")
     console.log("BUTTOONNsdfgd");
-    router.push(`/sendmail?selecteddvalue=${selecteddvalue}`);
+    router.push(`/template?selecteddvalue=${selecteddvalue}`);
 
   };
   return (
